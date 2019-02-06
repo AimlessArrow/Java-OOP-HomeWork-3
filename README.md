@@ -1,7 +1,7 @@
 # Java-OOP-HomeWork-3
 
-Java ООП Домашнее задание 2
+Java ООП Домашнее задание 3
 
-Введение в ООП
+Полиморфизм. Работа с исключениями.
 
-Задание создать классы: Shape, Point, Board и примеры фигур (Triangle, Square, Tetragon, Circle). Основной класс: Main
+Задание создать классы: Human, Student, Group и создать своё исключение (overflowException). Основной класс: Main
