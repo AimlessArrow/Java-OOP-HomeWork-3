@@ -7,6 +7,19 @@ public class Human {
 	private String gender;
 	private int age;
 	
+	public Human() {
+		super();
+	}
+
+	public Human(String firstName, String lastName, String patronymic, String gender, int age) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.patronymic = patronymic;
+		this.gender = gender;
+		this.age = age;
+	}
+
 	public String getFirstName() {
 		return firstName;
 	}

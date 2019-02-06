@@ -5,6 +5,10 @@ import java.util.ArrayList;
 public class Group {
 	private Student[] studentGroup = new Student[10];
 	
+	public Group() {
+		super();
+	}
+
 	public Student getStudent(int index) {
 		Student targetStudent = null;
 		try {
@@ -53,9 +57,12 @@ public class Group {
 		String currentSurname = "";
 		
 		for(int i = 0; i < this.studentGroup.length; i++) {
-			if(this.studentGroup[i] != null) {
+			try {
 				currentSurname = this.studentGroup[i].getLastName();
-			} else if(currentSurname == lastName) {
+			} catch(NullPointerException e) {
+				continue;
+			}
+			if(currentSurname == lastName) {
 				return i;
 			}
 		}
