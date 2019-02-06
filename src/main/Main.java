@@ -27,6 +27,21 @@ public class Main {
 		tempIndex = myGroup.searchStudent("Times");
 		tempStudent = myGroup.getStudent(tempIndex);
 		System.out.println(tempStudent);
+		/* Overflow check */
+		try {
+			myGroup.addStudent(new Student("Ava", "Terry", "Evelyn", "female", 32));
+			myGroup.addStudent(new Student("Audrey", "McDonald", "Franklin", "male", 50));
+			myGroup.addStudent(new Student("Jasmine", "Bond", "Bond", "female", 23));
+			myGroup.addStudent(new Student("Rebecca", "Welch", "Victoria", "female", 47));
+			myGroup.addStudent(new Student("Ian", "Hardacre", "George", "male", 49));
+			myGroup.addStudent(new Student("Richard", "Harris", "James", "male", 35));
+			myGroup.addStudent(new Student("James", "Fraser", "Junior", "male", 58));
+			myGroup.addStudent(new Student("Andrea", "Peters", "Gloria", "female", 20));
+		} catch(overflowException e) {
+			/* e.printStackTrace(); */
+			System.out.println(e);
+		}
+		System.out.println(myGroup);
 	}
 
 }
